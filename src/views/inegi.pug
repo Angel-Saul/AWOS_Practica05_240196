@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h2(class="text-3xl font-bold mb-6")= pagina
+
+  form(method="GET", action="/inegi", class="mb-10")
+    input(
+      type="text",
+      name="indicador",
+      value=indicador,
+      placeholder="Ejemplo: 493911"
+      class="w-full md:w-1/2 p-3 rounded-lg bg-slate-800 border border-slate-700 text-white"
+    )
+    button(
+      type="submit",
+      class="ml-0 md:ml-4 mt-4 md:mt-0 px-6 py-3 bg-emerald-500 rounded-lg hover:bg-emerald-600 transition"
+    ) Consultar
+
+  if datos && datos.length
+    table(class="w-full bg-slate-900 rounded-xl overflow-hidden")
+      thead
+        tr(class="bg-slate-800 text-left")
+          th(class="p-4") Periodo
+          th(class="p-4") Valor
+
+      tbody
+        each item in datos
+          tr(class="border-t border-slate-700")
+            td(class="p-4")= item.TIME_PERIOD
+            td(class="p-4")= item.OBS_VALUE

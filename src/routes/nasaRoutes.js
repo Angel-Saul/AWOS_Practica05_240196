@@ -5,6 +5,6 @@ import { mostrarNASA } from '../controllers/nasaController.js'
 
 const router = express.Router()
 
-router.get('/nasa', mostrarNASA)
+router.get('/', mostrarNASA)
 
 export default router

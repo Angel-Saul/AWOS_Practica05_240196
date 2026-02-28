@@ -3,6 +3,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import dotenv from 'dotenv'
 import nasaRoutes from './src/routes/nasaRoutes.js'
+import inegiRoutes from './src/routes/inegiRoutes.js'
 
 dotenv.config()
 
@@ -18,7 +19,8 @@ app.set('views', path.join(__dirname, 'src/views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Rutas externas
-app.use('/', nasaRoutes)
+app.use('/nasa', nasaRoutes)
+app.use('/inegi', inegiRoutes)
 
 // Ruta principal
 app.get('/', (req, res) => {
