@@ -50,7 +50,7 @@ Información de competiciones, tablas de posiciones, datos de selecciones/ligas.
 |No.|Descripción|Estatus|
 |---|---|---|---|
 |1.| Configurar package.json | ✅ Finalizado |
-|2.| Crear estructura base  | ❌ |
+|2.| Crear estructura base  | ✅ Finalizado |
 |3.| Configurar Express | ❌ |
 |4.| Configurar Tailwind  | ❌ |
 |5.| Creación de las vistas | ❌ |
