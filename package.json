@@ -1,0 +1,37 @@
+{
+  "name": "awos_practica05_240196",
+  "version": "1.0.0",
+  "description": "Consumo de API´s publicas",
+  "keywords": [
+    "NASA",
+    "INEGI",
+    "FIFA"
+  ],
+  "homepage": "https://github.com/Angel-Saul/AWOS_Practica05_240196#readme",
+  "bugs": {
+    "url": "https://github.com/Angel-Saul/AWOS_Practica05_240196/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Angel-Saul/AWOS_Practica05_240196.git"
+  },
+  "license": "ISC",
+  "author": "Angel Saúl Barrios Martínez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.13.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "nodemon": "^3.1.14",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.1"
+  }
+}
