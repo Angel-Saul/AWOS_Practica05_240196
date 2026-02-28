@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  h2(class="text-3xl font-bold mb-6")= pagina
+
+  // Botón Imagen del Día
+  a(
+    href="/nasa?apod=true",
+    class="inline-block mb-6 px-6 py-3 bg-purple-600 rounded-lg hover:bg-purple-700 transition"
+  ) 🌅 Ver Imagen del Día
+
+  // Buscador
+  form(method="GET", action="/nasa", class="mb-10")
+    input(
+      type="text",
+      name="q",
+      value=busqueda,
+      placeholder="Buscar: moon, mars, earth..."
+      class="w-full md:w-1/2 p-3 rounded-lg bg-slate-800 border border-slate-700 text-white"
+    )
+    button(
+      type="submit",
+      class="ml-0 md:ml-4 mt-4 md:mt-0 px-6 py-3 bg-cyan-500 rounded-lg hover:bg-cyan-600 transition"
+    ) Buscar
+
+  // 🌅 Mostrar APOD
+  if apodData
+    .bg-slate-900.p-6.rounded-2xl.shadow.border.border-slate-800.mb-10
+      h3(class="text-xl font-semibold text-purple-400 mb-4")= apodData.title
+      if apodData.media_type === "image"
+        img(src=apodData.url class="w-full rounded-xl mb-4")
+      p(class="text-slate-400")= apodData.explanation
+
+  // 🔍 Mostrar resultados de búsqueda
+  if imagenes.length
+    .grid(class="grid-cols-1 md:grid-cols-3 gap-8")
+      each item in imagenes
+        - const info = item.data[0]
+        - const img = item.links ? item.links[0].href : null
+
+        if img
+          .bg-slate-900.p-6.rounded-xl.shadow.border.border-slate-800
+            h3(class="font-semibold mb-2 text-cyan-400")= info.title
+            img(src=img class="w-full rounded mb-4")
+            p(class="text-slate-400 text-sm")= info.description

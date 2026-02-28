@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  .text-center.mb-12
+    h2(class="text-4xl font-extrabold text-white mb-4")
+      | Bienvenido al Dashboard de APIs Públicas
+    p(class="text-slate-400 text-lg")
+      | Proyecto de consumo de datos reales.
+
+  .grid(class="grid-cols-1 md:grid-cols-3 gap-8")
+
+    .bg-slate-900.p-6.rounded-2xl.shadow-lg.border.border-slate-800.transition(class="hover:scale-105")
+      h3.text-xl.font-semibold.text-cyan-400.mb-2 NASA
+      p.text-slate-400.mb-4 Explora datos astronómicos en tiempo real.
+      a.inline-block.bg-cyan-500.text-white.px-4.py-2.rounded-lg.transition(
+        class="hover:bg-cyan-600",
+        href="/nasa"
+      ) Ver más
+
+    .bg-slate-900.p-6.rounded-2xl.shadow-lg.border.border-slate-800.transition(class="hover:scale-105")
+      h3.text-xl.font-semibold.text-emerald-400.mb-2 INEGI
+      p.text-slate-400.mb-4 Consulta estadísticas oficiales de México.
+      a.inline-block.bg-emerald-500.text-white.px-4.py-2.rounded-lg.transition(
+        class="hover:bg-emerald-600",
+        href="/inegi"
+      ) Ver más
+
+    .bg-slate-900.p-6.rounded-2xl.shadow-lg.border.border-slate-800.transition(class="hover:scale-105")
+      h3.text-xl.font-semibold.text-yellow-400.mb-2 FIFA
+      p.text-slate-400.mb-4 Información y datos del fútbol internacional.
+      a.inline-block.bg-yellow-500.text-white.px-4.py-2.rounded-lg.transition(
+        class="hover:bg-yellow-600",
+        href="/fifa"
+      ) Ver más
