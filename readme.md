@@ -52,7 +52,7 @@ Información de competiciones, tablas de posiciones, datos de selecciones/ligas.
 |1.| Configurar package.json | ✅ Finalizado |
 |2.| Crear estructura base  | ✅ Finalizado |
 |3.| Configurar Express | ✅ Finalizado |
-|4.| Configurar Tailwind  | ❌ |
+|4.| Configurar Tailwind  | ✅ Finalizado |
 |5.| Creación de las vistas | ❌ |
 |6.| Pruebas | ❌ |
 |7.| Documentación | ❌ |
