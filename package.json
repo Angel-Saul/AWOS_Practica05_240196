@@ -19,8 +19,8 @@
   "author": "Angel Saúl Barrios Martínez",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/app.js",
-    "build:css": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch"
+    "server": "nodemon index.js",
+    "watch:css": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./public/css/styles.css --watch"
   },
   "dependencies": {
     "axios": "^1.13.6",
